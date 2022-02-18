@@ -1,0 +1,20 @@
+<h1>Числа Армстронга</h1>
+<p><%= @result %></p>
+<% if @numbers != 'Incorrect!' %>
+  <table>
+    <tr>
+      <td>Число</td>
+      <td>Раскладка</td>
+    </tr>
+    <% @numbers.each do |num| %>
+      <tr>
+        <td><%= num[0] %></td>
+        <td><%= num[1] %></td>
+      </tr>
+    <% end %>
+  </table>
+<% else %>
+  <p>Числа не найдены!</p>
+<% end %>
+<br>
+<%= link_to "Ввести новую длину", :root %>

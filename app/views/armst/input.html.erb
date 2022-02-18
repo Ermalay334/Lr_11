@@ -1,0 +1,9 @@
+<h1>Числа Армстронга</h1>
+<p>Введите кол-во знаков для чисел Армстронга</p>
+<%= form_tag("/armst/view", :method => "get") do %>
+  <%= label_tag("Кол-во знаков") %>
+  <%= text_field_tag(:v1) %> <br/>
+  <br/>
+  <%= submit_tag("Результат") %>
+<% end %><br/>
+<%= button_to('Все данные', "/armst/results.xml", :method => "get") %>
